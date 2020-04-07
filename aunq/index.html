@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Artistas unidos na quarentena</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/reset.css"/>
+        <link rel="stylesheet" href="css/admin.css"/>
+        <link rel="stylesheet" href="css/bootstrap.css"/>
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script> 
+    </head>
+    <body>
+        <style>
+
+            /* NavBar */
+
+            #nav-bloc {
+              margin-top: 30px;
+            }
+
+            .navbar{
+                    margin-bottom: 0;
+            }
+            .navbar-brand{
+                    font-size: 25px;
+                    font-weight: bold;
+                    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                    font-weight: 600;
+            }
+            .navbar-brand img{
+                    width: auto;
+                    max-height: 40px;
+                    margin: -12px 5px 0 0;
+            }
+            .navbar-brand{
+                    padding: 15px 15px;
+            }
+            .navbar .nav{
+                    padding-top: 2px;
+                    margin-right: -16px;
+                    float:right;
+            }
+            .nav > li{
+                    float: left;
+                    margin-top: 4px;
+                    font-size: 16px;
+            }
+            .nav > li a:hover{
+                    background:transparent;
+            }
+            .navbar-toggle{
+                    margin: 12px;
+                    border: 0px;
+            }
+            .navbar-toggle:hover{
+                    background:transparent!important;
+            }
+            .navbar-toggle .icon-bar{
+                    background-color: rgba(0,0,0,.5);
+                    width: 26px;
+            }
+            .navbar-collapse.in {
+            overflow-y: visible;
+            float: left;
+            width: 100%;
+            }
+            .navbar-1 {
+              float: right;
+            }
+
+            /* Mobile adjustments */
+
+            @media (max-width: 768px)
+            {
+                .bloc{
+                    text-align: center;
+                    -webkit-background-size: auto 200%;
+                    -moz-background-size: auto 200%;
+                    -o-background-size: auto 200%;
+                    background-size: auto 200%;
+                }
+                .navbar .nav{
+                    padding-top: 0;
+                    border-top:1px solid rgba(0,0,0,.2);
+                    float:none!important;
+                }
+                .nav > li{
+                    margin-top: 0;
+                    border-bottom:1px solid rgba(0,0,0,.1);
+                    background:rgba(0,0,0,.05);
+                    text-align: left;
+                    width:100%;
+                }
+                .nav > li:hover{
+                    background:rgba(0,0,0,.08);
+                }
+                .navbar-collapse{
+                    -webkit-box-shadow: none;
+                    box-shadow: none;
+                }
+                .btn.pull-left, .btn.pull-right{
+                   float:none!important; 
+                }
+                .bloc-xl,.bloc-lg{
+                    padding: 40px 0;
+                }
+                .a-block{
+                    text-align: center;
+                }
+            }
+        </style>
+     
+        <div class="container-fluid bg_gray">
+            <div class="container">
+                <div class="col-md-12">
+                    <div class="bloc l-bloc bottom20" id="nav-bloc">
+                        <nav class="navbar">
+                            <div class="navbar-header">
+                                <b><a class="navbar-brand text-success" href="#">AUNQ</a></b>
+                                <button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="collapse navbar-collapse navbar-1">
+                                <ul class="site-navigation nav">
+                                    <li><a href="#">Sobre nós</a></li>
+                                    <li><a href="#">Eventos</a></li>
+                                    <li><a href="#">Contato</a></li>  
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+     
+            <div class="container">
+                <div class="col-md-12 shadow-lg p-3 mb-5 bg-white rounded">
+                    <img src="aunq.jpg" width="1280" class="img-rounded img-responsive"/> 
+                </div> 
+            </div>
+
+            <div class="container">
+                <div class="col-md-12 jumbotronBox top20 shadow-lg p-3 mb-5 bg-white rounded">
+                    <h3 class="text-center text-success">AUNQ</h3>
+                    <p class="text-justify text-success"><i class="glyphicon glyphicon-ok"></i> <b>Lista de Horário com os artistas que se apresentarão neste projeto, basta clicar no link do artista e você será direcionado para a transmissão ao vivo</b></p>
+                    <p class="text-justify text-success"><i class="glyphicon glyphicon-ok"></i> <b>Você pode contribuir com qualquer valor para que nosso projeto tenha força e possamos custear nossas despesas e ajudar os músicos de nossa região</b></p>
+                    <p class="text-center text-success"><a href="#" class="btn btn-success">Clique para Contribuir</a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-fluid parallax1">
+            <div class="table table-responsive top20">
+                <table class="table table-striped">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th><b>DATA</b></th>
+                            <th><b>HORÁRIO</b></th>
+                            <th><b>ARTISTA</b></th>
+                            <th><b>FACEBOOK</b></th>
+                            <th><b>INSTAGRAM</b></th>
+                        </tr>
+                    </thead>
+                    <!--PRIMEIRA SEMANA-->
+                    <tr>
+                        <td><p class="text-danger"><b>23/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:00</b></p></td>
+                        <td><p class="text-danger"><b>Nanny Ribeiro</b></p></td>
+                        <td><a href="https://www.facebook.com/nannyribeiroficial" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+                    <tr>
+                        <td><p class="text-danger"><b>23/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:30</b></p></td>
+                        <td><p class="text-danger"><b> Os caiçaras</b></p></td>
+                        <td><a href="https://www.facebook.com/ocaicaras" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"><b>24/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:00</b></p></td>
+                        <td><p class="text-danger"><b>Vini Lourenço</b></p></td>
+                        <td><a href="https://www.instagram.com/vini.lourencooficial/" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"> <b>24/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:30</b></p></td>
+                        <td><p class="text-danger"><b>Chinela Brazuca</b></p></td>
+                        <td><a href="https://www.instagram.com/brazuca_chinela/" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+                    <tr>
+                        <td><p class="text-danger"> <b>25/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:00</b></p></td>
+                        <td><p class="text-danger"><b>Nando Botelho</b></p></td>
+                        <td><a href="https://www.instagram.com/nandobotelhos/" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr> 
+
+                    <tr>
+                        <td><p class="text-danger"> <b>25/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:30</b></p></td>
+                        <td><p class="text-danger"><b>Music Box</b></p></td>
+                        <td><a href="https://www.facebook.com/bandamusicbox" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr> 
+
+                    <tr>
+                        <td><p class="text-danger"> <b>26/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:00</b></p></td>
+                        <td><p class="text-danger"><b>Nanne e Rogerio</b></p></td>
+                        <td><a href="https://www.facebook.com/reisnanne" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"> <b>26/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:30</b></p></td>
+                        <td><p class="text-danger"><b>Arcanus</b></p></td>
+                        <td><a href="https://www.facebook.com/arcanus_br" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"> <b>27/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:00</b></p></td>
+                        <td><p class="text-danger"><b>Patrícia Mendes</b></p></td>
+                        <td><a href="https://www.facebook.com/patriciamendes_oficial" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"> <b>27/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:30</b></p></td>
+                        <td><p class="text-danger"><b>Clube dos 5</b></p></td>
+                        <td><a href="https://www.facebook.com/banda.clubedos5" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"> <b>28/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:00</b></p></td>
+                        <td><p class="text-danger"><b>Bruno e Mike</b></p></td>
+                        <td><a href="https://www.facebook.com/brunoemike" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr> 
+
+                    <tr>
+                        <td><p class="text-danger"> <b>28/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:30</b></p></td>
+                        <td><p class="text-danger"><b>Socorristas</b></p></td>
+                        <td><a href="https://www.facebook.com/socorristasrockbr" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"> <b>29/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:00</b></p></td>
+                        <td><p class="text-danger"><b>Lincon Chagas</b></p></td>
+                        <td><a href="https://www.facebook.com/lincon.chagas" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"> <b>29/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:30</b></p></td>
+                        <td><p class="text-danger"><b>Os Alexandres</b></p></td>
+                        <td><a href="https://www.facebook.com/alexandregoulart2015" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <!--SEGUNDA SEMANA-->
+                    <tr>
+                        <td><p class="text-danger"> <b>30/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:00</b></p></td>
+                        <td><p class="text-danger"><b>Emi Bessie</b></p></td>
+                        <td><a href="https://www.facebook.com/emibessie" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+                    <tr>
+                        <td><p class="text-danger"> <b>30/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:30</b></p></td>
+                        <td><p class="text-danger"><b>Pentakapta</b></p></td>
+                        <td><a href="https://www.facebook.com/pentakapta" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"> <b>31/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:00</b></p></td>
+                        <td><p class="text-danger"><b>Léo Nogueira</b></p></td>
+                        <td><a href="https://www.facebook.com/leonogueirabaixada" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"> <b>31/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:30</b></p></td>
+                        <td><p class="text-danger"><b>Reefbreak</b></p></td>
+                        <td><a href="https://www.facebook.com/bandareefbreak" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+                    <tr>
+                        <td><p class="text-danger"> <b>01/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:00</b></p></td>
+                        <td><p class="text-danger"><b>Mateus Villa</b></p></td>
+                        <td><a href="https://www.facebook.com/mateus_villaoficial" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr> 
+
+                    <tr>
+                        <td><p class="text-danger"> <b>01/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:30</b></p></td>
+                        <td><p class="text-danger"><b>Gabriel Delfino</b></p></td>
+                        <td><a href="https://www.facebook.com/gabrieldelfinooficial" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr> 
+
+                    <tr>
+                        <td><p class="text-danger"> <b>02/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:00</b></p></td>
+                        <td><p class="text-danger"><b>Marcel Rabelo</b></p></td>
+                        <td><a href="https://www.facebook.com/marcel.rabelo" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"> <b>02/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:30</b></p></td>
+                        <td><p class="text-danger"><b>Edy Rodrigues</b></p></td>
+                        <td><a href="https://www.facebook.com/edyrodriguesoficial__" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"> <b>03/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:00</b></p></td>
+                        <td><p class="text-danger"><b>Rodrigo e Adriel</b></p></td>
+                        <td><a href="https://www.facebook.com/rodrigoeadriel" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"> <b>03/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:30</b></p></td>
+                        <td><p class="text-danger"><b>Jozés</b></p></td>
+                        <td><a href="https://www.facebook.com/jozesrock" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"> <b>04/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:00</b></p></td>
+                        <td><p class="text-danger"><b>Tí Simões</b></p></td>
+                        <td><a href="https://www.facebook.com/ti.simoes.oficial" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr> 
+
+                    <tr>
+                        <td><p class="text-danger"><b>04/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:30</b></p></td>
+                        <td><p class="text-danger"><b>Gurvan</b></p></td>
+                        <td><a href="https://www.facebook.com/gurvan.oficial" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"><b>05/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:00</b></p></td>
+                        <td><p class="text-danger"><b>Jhana Rosa</b></p></td>
+                        <td><a href="https://www.facebook.com/oficialjhanarosa" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"><b>05/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:30</b></p></td>
+                        <td><p class="text-danger"><b>4 Cilindros</b></p></td>
+                        <td><a href="https://www.facebook.com/banda4cilindros" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                     <tr>
+                        <td><p class="text-danger"><b>06/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:00</b></p></td>
+                        <td><p class="text-danger"><b>Ton Cremon</b></p></td>
+                        <td><a href="https://www.facebook.com/toncremonoficial" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+
+                    <tr>
+                        <td><p class="text-danger"> <b>06/03/2020</b></p></td>
+                        <td><p class="text-danger"><b>20:30</b></p></td>
+                        <td><p class="text-danger"><b> Alta Conexão</b></p></td>
+                        <td><a href="https://www.facebook.com/bandaaltaconexao" target="_blank"><i class="fa fa-facebook"></i> <b>FACEBOOK</b></a></td>
+                        <td><a href="" target="_blank"><i class="fa fa-instagram"></i> <b>INSTAGRAM</b></a></td>
+                    </tr>
+                </table>
+            </div>
+         </div>
+        
+        <div class="container-fluid bg_black">
+            <div class="col-md-12">
+                <p class="text-center"> AUNQ - Todos os Direitos Reservados 2020</p>
+            </div>
+        </div>
+    </body>
+</html>
